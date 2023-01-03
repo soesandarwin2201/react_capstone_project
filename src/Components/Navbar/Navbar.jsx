@@ -1,6 +1,8 @@
 import React from 'react';
 import {BsFillBugFill} from 'react-icons/bs';
 
+
+
 const Navbar = () => {
  return (
    <>
@@ -23,7 +25,7 @@ const Navbar = () => {
                </a>
              </li>
              <li class='nav-item'>
-               <a class='nav-link' href='#'>
+               <a class='nav-link' href='#Details'>
                  Details
                </a>
              </li>
