@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+section {
+  padding: 2% 2%;
+}
+
+.bugs-container {
+  width: 95vw;
+}
+
+.bug-lists {
+  display: flex;
+  flex-wrap: wrap;
+}

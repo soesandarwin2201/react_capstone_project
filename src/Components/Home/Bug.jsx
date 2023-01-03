@@ -1,20 +1,13 @@
 import React from 'react';
 
-const Bug = () => {
+const Bug = (props) => {
+  const bug = props;
  return (
    <>
-     <div className='bug'>
-       <h3>Bug name</h3>
-       <a href='#'>It is image</a>
-       <div className='span-container'>
-         <span>it it blh</span>
-         <span>it it blh</span>
-         <span>it it blh</span>
-       </div>
-       <div className="info">
-        <p>It is awesome</p>
-       </div>
-     </div>
+      <div className="card" style={{ width : '10rem' , height : '10rem'}}>
+     <img class="card-img-top" src={bug.icon_uri} alt="Card image cap" />
+      </div>
+
    </>
  );
 }
