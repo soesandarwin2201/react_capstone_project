@@ -1,13 +1,32 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import {AiOutlineHeart} from 'react-icons/ai';
+import { HiViewGridAdd } from 'react-icons/hi';
 
 const Bug = (props) => {
+  console.log('it is bug');
   const bug = props;
+  const navigate = useNavigate();
+
+  const detailLink = () => {
+    navigate('/Details',{state : bug} )
+  }
  return (
    <>
-      <div className="card" style={{ width : '10rem' , height : '10rem'}}>
-     <img class="card-img-top" src={bug.icon_uri} alt="Card image cap" />
-      </div>
-
+     <div className='single-card'>
+       <div className='icon-container'>
+         <AiOutlineHeart
+           className='heart-icon'
+         />
+         <HiViewGridAdd className='see-more' onClick={() => {detailLink()}} />
+       </div>
+       <div className='img-container'>
+         <img src={bug.icon_uri} alt='cute bug' />
+       </div>
+       <div className='bug-info'>
+         <p className='bug-name'>{bug['file-name']}</p>
+       </div>
+     </div>
    </>
  );
 }
