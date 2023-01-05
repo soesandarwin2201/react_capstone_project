@@ -3,3 +3,57 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: #f5f5f5;
+}
+
+section {
+  padding: 2% 2%;
+}
+
+.bugs-container {
+  width: 95vw;
+}
+
+.bug-lists {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.single-card {
+  width: 180px;
+  height: 250px;
+  border: 1px solid #c5c5c5;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.img-container {
+  margin-top: 1rem;
+  margin-inline: 1rem;
+}
+
+.bug-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.bug-name {
+  font-size: 1rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heart-icon,
+.see-more {
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 1rem;
+}
