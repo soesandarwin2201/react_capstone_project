@@ -1,29 +1,40 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Bug from '../Home/Bug'
+import { AiOutlineHeart } from 'react-icons/ai';
 
 
 const Details = () => {
-  console.log('it id render');
   const location = useLocation();
   const bug = location.state;
  return (
    <>
-   <h1>It is details</h1>
-   <p>{bug.id}</p>
-     
      <div className='bug-detail-container'>
        <div className='single-bug'>
-         <h1 className='bug-name'>{bug['file-name']}</h1>
-         <img src={bug.image_uri} alt='cute bug' />
-         <div className='span-container'>
-           <span>{bug.price}</span>
-           <span>{bug['price-flick']}</span>
-           <span>{bug.id}</span>
+         <div className='detail-img-container'>
+           <img src={bug.image_uri} alt='cute bug' />
+         </div>
+         <div className='bug-details-info'>
+           <div className='name-container'>
+             <p className='bug-name'> ${bug['file-name']}</p>
+             <AiOutlineHeart className='heart-icon' />
+           </div>
+           <p className='bug-price'> ${bug.price}</p>
+           <p className='price-flick'>${bug['price-flick']}</p>
          </div>
          <div className='bug-info'>
            <p>{bug['catch-phrase']}</p>
-           <p>{bug['museum-phrase']}</p>
+         </div>
+         <div className='abilities'>
+           <ul>
+             <li>
+               <p>Common</p>
+               <p>{bug.name['name-CNzh']}</p>
+             </li>
+             <li>
+               <p>Location</p>
+               <p>{bug.availability['time']}</p>
+             </li>
+           </ul>
          </div>
        </div>
      </div>
