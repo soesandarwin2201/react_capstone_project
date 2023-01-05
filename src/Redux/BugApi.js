@@ -1,11 +1,11 @@
-import { createAsyncThunk, createSlice , current } from '@reduxjs/toolkit';
-import { act } from 'react-dom/test-utils';
+/* eslint no-param-reassign: "error" */
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const BUG_URL = 'https://acnhapi.com/v1a/bugs';
 
 const initialState = {
   bugs: [],
-  filterBugs : [],
+  filterBugs: [],
   amount: 0,
   total: 0,
   isLoading: true,
@@ -20,19 +20,14 @@ export const getBugData = createAsyncThunk('bug/getBugData', async () => {
 const bugSlice = createSlice({
   name: 'bug',
   initialState,
-  reducers : {
-    filterReducer : (state , action ) => {
-      return {...state , 
-      filterBugs : state.bugs.filter(bug => {
-        console.log((bug['file-name']).includes(action.payload));
-        return bug['file-name'].includes(action.payload);
-      }
-        )  }
-        
-    }
+  reducers: {
+    filterReducer: (state, action) => ({
+      ...state,
+      filterBugs: state.bugs.filter((bug) => bug['file-name'].includes(action.payload)),
+    }),
   },
   extraReducers: (builder) => {
-    builder.addCase(getBugData.pending, (state, action) => {
+    builder.addCase(getBugData.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(getBugData.fulfilled, (state, action) => {
@@ -40,11 +35,11 @@ const bugSlice = createSlice({
       state.filterBugs = action.payload;
       state.isLoading = false;
     });
-    builder.addCase(getBugData.rejected, (state, action) => {
+    builder.addCase(getBugData.rejected, (state) => {
       state.isLoading = false;
     });
   },
 });
 
-export const { filterReducer} = bugSlice.actions;
+export const { filterReducer } = bugSlice.actions;
 export default bugSlice.reducer;
