@@ -4,7 +4,6 @@ import {AiOutlineHeart} from 'react-icons/ai';
 import { HiViewGridAdd } from 'react-icons/hi';
 
 const Bug = (props) => {
-  console.log('it is bug');
   const bug = props;
   const navigate = useNavigate();
 

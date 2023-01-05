@@ -25,11 +25,6 @@ const Navbar = () => {
                  Home
                </Link>
              </li>
-             <li class='nav-item'>
-               <Link class='nav-link' to='/Details'>
-                 Details
-               </Link>
-             </li>
            </ul>
            <Form />
          </div>

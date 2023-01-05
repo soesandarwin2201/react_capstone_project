@@ -1,11 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { CgArrowLeftR } from 'react-icons/cg';
 
 
 const Details = () => {
   const location = useLocation();
   const bug = location.state;
+  const navigate = useNavigate();
+
+  const HomeLink = () => {
+    navigate('/', { state: bug });
+  };
+
  return (
    <>
      <div className='bug-detail-container'>
@@ -16,7 +23,12 @@ const Details = () => {
          <div className='bug-details-info'>
            <div className='name-container'>
              <p className='bug-name'> ${bug['file-name']}</p>
-             <AiOutlineHeart className='heart-icon' />
+             <CgArrowLeftR
+               className='see-more'
+               onClick={() => {
+                 HomeLink();
+               }}
+             />
            </div>
            <p className='bug-price'> ${bug.price}</p>
            <p className='price-flick'>${bug['price-flick']}</p>
