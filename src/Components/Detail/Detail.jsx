@@ -1,6 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { CgArrowLeftR } from 'react-icons/cg';
 import { AiOutlineHeart } from 'react-icons/ai';
 import './Detail.css';

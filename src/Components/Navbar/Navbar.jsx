@@ -8,21 +8,21 @@ import './Navbar.css';
 const Navbar = () => {
  return (
    <>
-     <nav class='navbar navbar-expand-lg bg-body-tertiary'>
-       <div class='container-fluid'>
-         <a class='navbar-brand' href='#'>
+     <nav className='navbar navbar-expand-lg bg-body-tertiary'>
+       <div className='container-fluid'>
+         <a className='navbar-brand' href='#'>
            <BsFillBugFill className='logo' /> Polili
          </a>
          <button
-           class='navbar-toggler'
+           className='navbar-toggler'
            type='button'
          >
-           <span class='navbar-toggler-icon'></span>
+           <span className='navbar-toggler-icon'></span>
          </button>
-         <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-           <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
-             <li class='nav-item'>
-               <Link class='nav-link active' aria-current='page' to='/'>
+         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+             <li className='nav-item'>
+               <Link className='nav-link active' aria-current='page' to='/'>
                  Home
                </Link>
              </li>
