@@ -85,14 +85,12 @@ section {
 
 @media screen and (max-width: 980px) {
   .single-card {
-    width: 18rem;
-    height: 20rem;
+    width: 30rem;
+    height: 22rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* flex-wrap: wrap; */
   }
 
   .heart-icon {
@@ -102,5 +100,9 @@ section {
 
   .see-more {
     font-size: 1rem;
+  }
+
+  .bug-name {
+    font-size: 1.2rem;
   }
 }
