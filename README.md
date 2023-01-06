@@ -77,9 +77,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Click here to see the [Live Demo]() of the website 
+Click here to see the [Live Demo](https://react-capstone-project.vercel.app/) of the website 
 
-  ![]()
+  ![](./src/Images/react-capstone-project.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
