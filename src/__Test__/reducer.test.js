@@ -1,6 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import bugReducer from '../Redux/BugApi';
-import { combineReducers } from "@reduxjs/toolkit";
 
 const initialState = {
   bugs: [],
@@ -8,20 +7,18 @@ const initialState = {
   amount: 0,
   total: 0,
   isLoading: true,
-}; ;
+};
 
 const reducer = combineReducers({
- bugReducer,
-})
+  bugReducer,
+});
 
 const store = configureStore({
- reducer
+  reducer,
 });
 
 describe('check the reducer', () => {
- it('it should retrun the initial state', () => {
-  expect(store.getState().bugReducer).toEqual(initialState);
- });
-
-})
-
+  it('it should return the initial state', () => {
+    expect(store.getState().bugReducer).toEqual(initialState);
+  });
+});
