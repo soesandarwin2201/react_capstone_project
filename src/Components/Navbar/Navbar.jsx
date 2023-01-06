@@ -2,6 +2,7 @@ import React from 'react';
 import {BsFillBugFill} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import Form from '../Form/Form';
+import './Navbar.css';
 
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
      <nav class='navbar navbar-expand-lg bg-body-tertiary'>
        <div class='container-fluid'>
          <a class='navbar-brand' href='#'>
-           <BsFillBugFill /> Polili
+           <BsFillBugFill className='logo' /> Polili
          </a>
          <button
            class='navbar-toggler'
