@@ -20,7 +20,7 @@ const Bug = (props) => {
          <HiViewGridAdd className='see-more' onClick={() => {detailLink()}} />
        </div>
        <div className='img-container'>
-         <img src={bug.icon_uri} alt='cute bug' />
+         <img src={bug.icon_uri} alt='cute bug'  className='bug-img'/>
        </div>
        <div className='bug-info'>
          <p className='bug-name'>{bug['file-name']}</p>
