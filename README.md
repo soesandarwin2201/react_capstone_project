@@ -99,6 +99,7 @@ In order to run this project you need:
 * React.js
 * npm
 * Node.js
+* vercel
 * Any code editer (vs code)
 
 
